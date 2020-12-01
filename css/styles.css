@@ -1,0 +1,323 @@
+/* Global styles
+--------------------------*/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  color: #343434;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+img {
+  width: 300px;
+}
+a {
+  color: #ffe66d;
+}
+a:hover {
+  text-decoration: none;
+}
+h1 {
+  font-size: 100px;
+  line-height: 1;
+}
+h2 {
+  font-size: 45px;
+}
+h1,
+h2 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 500;
+  margin: 0;
+}
+.content-wrap {
+  max-width: 800px;
+  width: 85%;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+h3 {
+  margin-bottom: 0;
+}
+.item-details h3 + p {
+  font-style: italic;
+}
+.item-details h3 ~ p {
+  margin: 0;
+}
+.divider > section {
+  border-bottom: 1px dashed #343434;
+  padding: 25px 0;
+}
+.divider > section:last-of-type {
+  border-bottom: none;
+}
+
+/* Portfolio
+--------------------------*/
+header {
+  background: #000000;
+  color: #f7fff7;
+}
+.my-img-id {
+  border-radius: 800px 300px;
+  width: 30%;
+  height: 20%;
+}
+
+/* Projects
+--------------------------*/
+.projects {
+  background: #f7fff7;
+}
+.projects a {
+  color: #2f3061;
+}
+.projects .btn {
+  color: #f7fff7;
+  background: #2f3061;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+}
+.projects .btn:hover {
+  background: rgba(47, 48, 97, 80%);
+}
+.project-item {
+  overflow: hidden;
+}
+.project-item h3 {
+  margin-top: 0;
+}
+
+/* Skills
+--------------------------*/
+.skills {
+  /* background-color: #333; */
+  background-image: url('../images/bg-lap.jpg');
+  min-height: 100%;
+
+  opacity: .85;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+}
+.skills-head {
+  color: #fff;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-gap: 1rem;
+  padding: 1rem 40px;
+  color: #fff;
+}
+
+.skill-box {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.skill-box:hover > .skill-title:after, .skill-box:hover > .skill-title:before {
+  width: 35px;
+} 
+
+.skill-box:hover .img {
+  transform: translateY(-10px);
+}
+
+.skill-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.skill-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  width: 0;
+  height: 4px;
+  border-radius: 2px 0 0 2px;
+  background-color: #ffe66d;
+  transition: .5s;
+}
+
+.skill-title:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 4px;
+  border-radius: 0 2px 2px 0;
+  background-color: #ffe66d;
+  transition: .5s;
+}
+
+.img {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  border-radius: 45px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+}
+
+.img:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 90px;
+  background: rgba(100, 100, 100, 0.5);
+  border-radius: 45px 0 0 45px;
+}
+
+.skill-title h3 {
+  margin-top: 0.5rem;
+}
+
+.skill-icon {
+  width: 50px;
+  z-index: 2;
+}
+
+/* Work Experience
+--------------------------*/
+.work-experience {
+  background: #c8bff4;
+}
+
+/* Education
+--------------------------*/
+.education {
+  background-image: url(../images/sharon-mccutcheon-unsplash.jpg);
+  background-size: cover;
+  background-position: top right;
+  padding-bottom: 100px;
+}
+.education p {
+  width: 60%;
+}
+
+/* Contact Info
+--------------------------*/
+footer {
+  background-image: url('../images/bg-wrt1.jpg');
+  min-height: 100%;
+
+  opacity: .85;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+  color: #f7fff7;
+}
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+}
+.contact-list a {
+  padding: 15px;
+  display: inline-block;
+}
+footer i {
+  font-size: 2em;
+}
+
+/* Responsive
+@media screen and
+--------------------------*/
+@media screen and  (max-width: 576px){
+  .my-img-id {
+    border-radius: 300px 300px;
+    width: 30%;
+    height: 30%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .my-img img{
+    justify-content: center;
+    align-items: center;
+  }
+  
+}
+@media screen and (min-width: 750px) {
+  header,
+  footer {
+    text-align: center ;
+  }
+  .project-item img {
+    float: left;
+    margin-right: 20px;
+  }
+  .job-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+  }
+  .contact-list {
+    display: flex;
+  justify-content: center;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  h1 {
+    font-size: 48px;
+    line-height: 0.9;
+    margin-bottom: 20px;
+  }
+  h2 {
+    line-height: 1.3;
+    font-size: 25px;
+  }
+  .contact-list a {
+    padding: 5px;
+  }
+  footer ul li {
+    display: inline-flex;
+  }
+  .container {
+    grid-template-columns: 1fr !important;
+  }
+  .skills{
+    background: #363737;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem 50px;
+  }
+}
